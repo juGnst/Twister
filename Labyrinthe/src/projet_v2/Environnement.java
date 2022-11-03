@@ -2,6 +2,7 @@ package projet_v2;
 
 import java.util.Arrays;
 
+
 public class Environnement implements Parametres {
 
 	private Case[][] plateau = new Case[I][J]; //Represente le plateau de jeu 

@@ -1,5 +1,6 @@
 package projet_v2;
 
+
 public class Case implements Parametres {
 
 	private int abs ; 

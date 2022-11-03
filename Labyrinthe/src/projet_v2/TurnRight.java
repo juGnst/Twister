@@ -6,6 +6,7 @@ import lejos.hardware.motor.Motor;
 import lejos.robotics.subsumption.Behavior;
 import lejos.utility.Delay;
 
+
 public class TurnRight implements Behavior {
 	private boolean tourne;
 	
