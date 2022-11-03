@@ -33,7 +33,7 @@ public class LowBattery implements Behavior {
 		Motor.B.stop(true); Motor.C.stop(true);
 	}
 
-	@Override
+
 	public void suppress() {
 		// TODO Auto-generated method stub
 		System.exit(0);

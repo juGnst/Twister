@@ -2,6 +2,7 @@ package projet_v2;
 
 public interface Parametres {
 	
+	
 	public static final int J= 5; //nombre de colonnes de l'environnement
     public static final int I= 7; // nombre de lignes de l'environnement
     public static final int TAILLE = I*J ; //nombre total de cases de l'environnement

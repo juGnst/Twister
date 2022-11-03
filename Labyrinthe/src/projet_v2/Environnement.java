@@ -94,5 +94,3 @@ public class Environnement implements Parametres {
 		setCase(4,3,"Orange");
 	}
 }
-
-

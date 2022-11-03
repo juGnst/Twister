@@ -29,8 +29,6 @@ public class Main {
 		Arbitrator arby = new Arbitrator(bArray);
 		b3.setArby(arby);
 		arby.go();
-		//b3.action();
-		//b3.suppress();
 	}
 
 }

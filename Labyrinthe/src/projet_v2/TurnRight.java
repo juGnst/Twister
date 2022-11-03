@@ -10,7 +10,7 @@ public class TurnRight implements Behavior {
 	private boolean tourne;
 	
 	
-	public boolean gettourne(){                      // lecture
+	public boolean gettourne(){ // lecture
 	     return tourne;
 	}
 	

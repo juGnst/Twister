@@ -10,7 +10,6 @@ import lejos.robotics.chassis.WheeledChassis;
 import lejos.robotics.navigation.MovePilot;
 import lejos.robotics.subsumption.Behavior;
 
-
 public class DriveForward implements Behavior, Parametres {
 		private int coordonnéeI = COORDONNEE_ID;
 		private int coordonnéeJ = COORDONNEE_JD;

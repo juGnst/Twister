@@ -26,7 +26,7 @@ public class EmergencyStop implements Behavior {
 		this.arby = a ; 
 	}
 
-	@Override
+
 	public void action() {
 		// TODO Auto-generated method stub
 		Motor.B.stop(true);

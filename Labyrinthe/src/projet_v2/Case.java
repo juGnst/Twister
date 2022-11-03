@@ -6,7 +6,6 @@ public class Case implements Parametres {
 	private int ord ; 
 	private String couleur = ""; 
 
-
 	public Case(int x , int y, String c){
 		this.abs = x;
 		this.ord = y ;
