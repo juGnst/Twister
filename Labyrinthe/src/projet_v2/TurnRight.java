@@ -8,17 +8,8 @@ import lejos.utility.Delay;
 
 
 public class TurnRight implements Behavior {
-	private boolean tourne;
-	
-	
-	public boolean gettourne(){ // lecture
-	     return tourne;
-	}
-	
-	public TurnRight(boolean tr)
-	{
-		this.tourne = tr;
-	}
+	DriveForward drive = new DriveForward();
+	private boolean tourne = drive.getParameter();
 	
 	@Override
 	public boolean takeControl() {
@@ -30,6 +21,7 @@ public class TurnRight implements Behavior {
 	public void action() {
 		LCD.clear();
 		LCD.drawString("TurnRight", 0, 1);
+		System.out.println(tourne);
 		LCD.refresh();
 		
 		Motor.B.forward();

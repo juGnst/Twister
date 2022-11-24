@@ -21,12 +21,12 @@ public class Main {
 		EV3ColorSensor cs = new EV3ColorSensor(SensorPort.S3);
 		EV3TouchSensor ts = new EV3TouchSensor(SensorPort.S1);
 		Behavior b = new LowBattery(cs,ts);
-		//Behavior b1 = new DriveForward(); // Avancer
+		Behavior b1 = new DriveForward(); // Avancer
 		//Behavior b2 = new TurnRight();
 		EmergencyStop b3=new EmergencyStop (cs,ts);
 		Behavior b4 = new CapterCouleur(cs);
 		Behavior b5 = new Recul();
-		Behavior[] bArray = { b5, b4, b3, b};
+		Behavior[] bArray = { b1,b5, b4, b3, b};
 		Arbitrator arby = new Arbitrator(bArray);
 		b3.setArby(arby);
 		arby.go();

@@ -16,14 +16,24 @@ public class DriveForward implements Behavior, Parametres {
 		private int coordonnéeJ = COORDONNEE_JD;
 		private float[] tabdir = new float [4]; //tableau des directions, ne change pas
 		private int direction = 2; //le robot commence face vers le haut, donc 2
-		private boolean axeI; private boolean axeJ;private boolean tourne;
+		//private boolean axeI; private boolean axeJ; inutile si on possède la direction
+		private boolean tourne = false;
 		
-		public DriveForward(boolean axI, boolean axJ, boolean tr) {
+		public DriveForward () {
 			for (int i=0; i<=3; i++) { // 0=bas 1=gauche 2=haut 3=droite
 				tabdir[i]=i;
 			}
-			this.axeI=axI; this.axeJ=axJ;this.tourne=tr;
 		}
+		
+		public void setParameter(boolean tr) {
+			this.tourne = tr;
+		}
+		/*
+	         * Returns the parameter as set by setParameter()
+	         */
+			public boolean getParameter() {
+				return this.tourne;
+			}
 		
 		@Override
 		public boolean takeControl() {return true; }
@@ -52,17 +62,17 @@ public class DriveForward implements Behavior, Parametres {
 			
 			
 			//manière de mettre à jour les coordonnées pour ne pas perdre le robot
-			if (axeI == true && direction==2) { //si on est sur l'axe I et que la direction est haut, on fait donc +1
+			if (direction==2) { //si on est sur l'axe I et que la direction est haut, on fait donc +1
 				coordonnéeI=coordonnéeI+1;
 			}
-			else if (axeI == true && direction==0){ //l'inverse, la direction est bas donc -1
+			else if (direction==0){ //l'inverse, la direction est bas donc -1
 				coordonnéeI=coordonnéeI-1;
 			}
 			
-			if (this.axeJ == true && direction == 3) { //l'axe J et que la direction est droite +1
+			if (direction == 3) { //l'axe J et que la direction est droite +1
 				coordonnéeJ=coordonnéeJ+1;
 			}
-			else if (axeJ == true && direction==1){ //l'inverse, la direction est fauche donc -1
+			else if (direction==1){ //l'inverse, la direction est fauche donc -1
 				coordonnéeJ=coordonnéeJ-1;
 			}
 			
